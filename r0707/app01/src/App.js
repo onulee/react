@@ -20,9 +20,9 @@ function App() {
   }
 
   const confirmBtn = () => {
-    alert('확인버튼');
+   // alert('확인버튼');
     console.log()
-    setCount(num); //useState값을 변경하려면 set을 사용한다.
+    setCount(Number(num)); //useState값을 변경하려면 set을 사용한다.
   }
 
   return (

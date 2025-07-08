@@ -1,0 +1,13 @@
+h2{color:blue; font-size:20px; }
+.btn{font-size:15px; width:120px; height:40px;
+display: inline-block; margin-right:15px;
+}
+
+.div01{
+    border: '1px solid black';
+    background:'yellow';
+    width:'200px';
+    height:'40px';
+    margin:'0 auto';
+    line-height:'40px';
+}
