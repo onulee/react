@@ -1,0 +1,12 @@
+.d_form{
+    width:500px; height:100px;
+    border:1px solid black;
+    margin:10px auto;
+}
+
+.t_shape table,th,td{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+.t_shape table{width:600px; margin:10px auto;}
+.t_shape th{width:200px; height:40px;}
