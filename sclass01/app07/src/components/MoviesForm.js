@@ -1,10 +1,15 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect,useRef} from 'react';
 
 const MoviesForm = ({addMovie,count,setCount}) =>{
 
     const [no,setNo] = useState('');
     const [title,setTitle] = useState('');
     const [year,setYear] = useState('');
+    const inputRef = useRef(); //input요소를 참조정의
+
+    useEffect(()=>{
+      inputRef.current.focus();    
+    },[])
 
     const confirmBtn = () =>{
         alert('영화정보를 저장합니다.');
@@ -29,7 +34,7 @@ const MoviesForm = ({addMovie,count,setCount}) =>{
             <div className="row">
                 <label for="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">영화제목</label>
                 <div className="col-sm-10">
-                <input type="text" value={title} 
+                <input ref={inputRef} type="text" value={title} 
                 onChange={(e)=>setTitle(e.target.value)} 
                 className="form-control form-control-lg" id="colFormLabelLg" placeholder="영화제목을 입력하세요." />
                 </div>

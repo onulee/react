@@ -1,9 +1,6 @@
 import React,{useState} from 'react';
 
-
-   
-
-const Movies = ({movie}) => {
+const Movies = ({movie,removeMovie}) => {
 
     const [now_dayTime,setNow_dayTime] = useState('');
     const todayInsert = () =>{
@@ -20,6 +17,13 @@ const Movies = ({movie}) => {
         setNow_dayTime(nowDate);
         return nowDate;
     }
+
+    const deleteBtn = () =>{
+       console.log("번호 : ",movie.no); 
+       if(window.confirm('삭제하시겠습니까?')){
+            removeMovie(movie.no);
+       }
+    }
     
     return (
         <div className="card text-center">
@@ -30,7 +34,7 @@ const Movies = ({movie}) => {
                 <h5 className="card-title">제목 : {movie.title}</h5>
                 <p className="card-text">제작년도 : {movie.year}년</p>
                 <a href="#" className="btn btn-primary">수정</a>
-                <a href="#" className="btn btn-primary">삭제</a>
+                <a onClick={deleteBtn} className="btn btn-primary">삭제</a>
             </div>
             <div className="card-footer text-body-secondary">
                 {now_dayTime}
