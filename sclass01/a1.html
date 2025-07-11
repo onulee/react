@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        let a_list = ['a','b','c'];
+        a_list.push('d');
+        console.log("a_list : ",a_list);
+        let b_list = [a_list,'1'];
+        console.log("b_list : ",b_list);
+
+        let c_list = [a_list[0],a_list[1],a_list[2],'1'];
+        console.log("c_list : ",c_list);
+
+        let d_list = [...a_list,'1'];
+        console.log("d_list : ",d_list);
+
+        let a_arr = a_list.map(a=>{return a});
+        console.log("a_arr : ",a_arr);
+
+        let a_filter = a_list.filter(a=>{if(a!='a') return a});
+        console.log("a_filter : ",a_filter);
+
+        let m_list = [
+            {no:1,title:'아이언맨 1',year:2022},
+            {no:2,title:'아이언맨 2',year:2023},
+            {no:3,title:'아이언맨 3',year:2024},
+        ];
+
+        console.log("m_list : ",m_list);
+
+        let chg = {no:4,title:'해리포터 1',year:2223};
+        let mm_list = m_list.map(m=> m.no==2?({...m,...chg}):m );
+        console.log("mm_list : ",mm_list); 
+        
+
+   </script> 
+</body>
+</html>
