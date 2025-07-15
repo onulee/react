@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>html메인</h2>
+    <script>
+        let a_list = ['a','b','c'];
+        // d 를 추가
+        console.log("a_list : ",a_list);
+        a_list.push('d'); //a_list배열은 주소가 바뀌지 않음.
+
+        console.log("a_list : ",a_list);
+        a_list = [a_list[0],a_list[1],a_list[2],a_list[3],'e'];
+        console.log("a_list : ",a_list);
+        b_list = [...a_list,'f'];
+        console.log("b_list : ",b_list);
+
+        // 반복문 - map, for,each,foreach
+        
+
+    </script>
+</body>
+</html>

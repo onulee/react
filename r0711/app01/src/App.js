@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <img src='/images/a1.jpg' />
       <h2 className='top_title'>영화리스트</h2>
       {movieList}
      
